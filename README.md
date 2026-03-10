@@ -29,6 +29,6 @@
 | [21_Sumatoria.dart](./21_Sumatoria.dart) | Sumatoria |
 | [22_Stack.dart](./22_Stack.dart) | Stack Implementation |
 | [23_Queue.dart](./23_Queue.dart) | Queue Implementation |
-| [24_tryCatch.dart](./24_tryCatch.dart) | Try-Catch Error Handling |
-| [25_Test.dart](./25_Test.dart) | Test Program |
+| [24_tryCatch.dart](./24_tryCatch.dart) | Try-Catch data types |
+| [25_Test.dart](./25_Test.dart) | Test |
 >>>>>>> 8bbfef078a2810b3b9ded46906f4cbe4e3973683

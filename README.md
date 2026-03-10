@@ -25,6 +25,13 @@
 | [19_primes.dart](./19_primes.dart) | Prime Numbers |
 | [20a_factorial.dart](./20a_factorial.dart) | Factorial A |
 | [20b_factorial.dart](./20b_factorial.dart) | Factorial B |
+| [20c_factorial.dart](./20c_factorial.dart) | Factorial C |
+| [21_Sumatoria.dart](./21_Sumatoria.dart) | Sumatoria |
+| [22_Stack.dart](./22_Stack.dart) | Stack Implementation |
+| [23_Queue.dart](./23_Queue.dart) | Queue Implementation |
+| [24_tryCatch.dart](./24_tryCatch.dart) | Try-Catch Error Handling |
+| [25_Test.dart](./25_Test.dart) | Test Program |
+
 =======
 ## Portfolio Unidad 1
 

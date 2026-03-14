@@ -1,41 +1,59 @@
 import 'dart:io';
 
 class Queue<T> {
-  final List<T> q = [];
-
-  void enqueue(T v) {
-    q.add(v);
-    print("Agregado $v.");
+  final List<T> items = [];
+  
+  void enqueue(T value) {
+    items.add(value);
+    print("Added: $value");
   }
 
-  void dequeue() =>
-      print(q.isEmpty ? "La cola está vacia." : "Eliminado ${q.removeAt(0)}.");
-  void show() => print(q.isEmpty ? "La cola está vacía." : "Estado: $q");
+  void dequeue() {
+    if (items.isEmpty) {
+      print("The queue is empty.");
+    } else {
+      var removed = items.removeAt(0);
+      print("Removed: $removed");
+    }
+  }
+
+  void show() {
+    if (items.isEmpty) {
+      print("The queue is empty.");
+    } else {
+      print("Current queue: $items");
+    }
+  }
 }
 
 void main() {
-  var cola = Queue<int>();
-  print("\nIngresa numero, 'dequeue', 'mostrar' o 'salir'.");
+  final queue = Queue<int>();
+
+  print("\nEnter a number, 'dequeue', 'show', or 'exit'.");
 
   while (true) {
-    stdout.write(">");
-    var input = stdin.readLineSync()?.trim().toLowerCase() ?? '';
+    stdout.write("> ");
+    String input = stdin.readLineSync()?.trim().toLowerCase() ?? "";
 
     switch (input) {
-      case 'Salir':
-        return print("Goodbye");
-      case 'Dequeue':
-        cola.dequeue();
+      case "exit":
+        print("Goodbye!");
+        return;
+      case "dequeue":
+        queue.dequeue();
         break;
-      case 'Mostrar':
-        cola.show();
+      case "show":
+        queue.show();
         continue;
       default:
-        if (int.tryParse(input) case int n)
-          cola.enqueue(n);
-        else
-          print("Entrada invalida.");
+        int? number = int.tryParse(input);
+        if (number != null) {
+          queue.enqueue(number);
+        } else {
+          print("Invalid input.");
+        }
     }
-    cola.show();
+
+    queue.show();
   }
 }
